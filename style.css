@@ -38,8 +38,6 @@ html {
 }
 canvas {
     display: inline;
-    width: 45vw;
-    height: 45vw;
     background-color: black;
 }
 
