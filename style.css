@@ -38,7 +38,7 @@ html {
 }
 canvas {
     display: inline;
-    background-color: black;
+    background: center / contain url("img/maze_template.png") no-repeat ;
 }
 
 
