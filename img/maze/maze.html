@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- Created with Ai->Canvas Export Plug-In Version 1.5 (PC/64) -->
+<!-- By Mike Swanson (http://blog.mikeswanson.com/)             -->
+
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>maze</title>
+  <script>
+
+    function init() {
+
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+      draw(ctx);
+    }
+
+    function draw(ctx) {
+
+      // layer1/Rectangle
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(800.0, 41.0);
+      ctx.lineTo(0.0, 41.0);
+      ctx.lineTo(0.0, 0.0);
+      ctx.lineTo(800.0, 0.0);
+      ctx.lineTo(800.0, 41.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(255, 54, 29)";
+      ctx.fill();
+
+      // layer1/Rectangle
+      ctx.beginPath();
+      ctx.moveTo(41.0, 0.0);
+      ctx.lineTo(41.0, 418.0);
+      ctx.lineTo(0.0, 418.0);
+      ctx.lineTo(0.0, 0.0);
+      ctx.lineTo(41.0, 0.0);
+      ctx.closePath();
+      ctx.fill();
+
+      // layer1/Rectangle
+      ctx.beginPath();
+      ctx.moveTo(41.0, 503.0);
+      ctx.lineTo(41.0, 884.0);
+      ctx.lineTo(0.0, 884.0);
+      ctx.lineTo(0.0, 503.0);
+      ctx.lineTo(41.0, 503.0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+  </script>
+ </head>
+ <body onload="init()">
+   <canvas id="canvas" width="800" height="884"></canvas>
+ </body>
+</html>
