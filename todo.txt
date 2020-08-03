@@ -1,0 +1,16 @@
+v1.0
+V	Ik heb een github repo pac-man
+V	Ik heb een html pagina met een titel PAC-MAN en een canvas erop
+V	er staat een doolhof op het scherm
+•	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
+•	je kunt teleporteren van links naar rechts en boven naar beneden (als geen muur is)
+•	er staan bolletjes in het doolhof die verdwijnen als hij erover heen komt
+•	De score wordt bijgehouden naar het aantal bolletjes
+•	er staan spoken in het midden
+•	de spoken bewegen random
+•	als pac-man op een spook komt gaat hij af, stopt het spel (game over)
+•	er zijn gekleurde bolletjes die een tijdelijke boost geven waardoor je de spookjes eet
+•	als een spook verdwijnt, komt hij weer in het midden
+•	als je alle bolletjes op hebt, stopt het spel (you win)
+•	als je een knopt indrukt (spatie, enter bijv), begint het spel opnieuw
+•	Het spel begint met een (new game, press enter to play)
