@@ -8,7 +8,7 @@ window.onload = function() {
 
    drawMaze();
    drawPacman();
-    drawGrid();
+   drawGrid();
 }
 
 function drawMaze() {
