@@ -15,20 +15,21 @@ html {
 }
 
 .title {
+    display: flex;
+    align-items: center;
     height: 10%;
     color:limegreen;
     text-align: center;
     position: fixed;
     height: 100%;
     width: 300px;
-    padding-left: 5%;
+
 }
 
 .title h1 {
     font-size: 5em;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    margin: auto 0;
 }
 
 #playfield {

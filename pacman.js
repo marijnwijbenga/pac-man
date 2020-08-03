@@ -8,6 +8,7 @@ window.onload = function() {
 
    drawMaze();
    drawPacman();
+    drawGrid();
 }
 
 function drawMaze() {
@@ -22,7 +23,7 @@ function drawMaze() {
     canvasContext.lineTo(0.0, 0.0);
     canvasContext.lineTo(0.0, 40.0);
     canvasContext.closePath();
-    canvasContext.fillStyle = "darkblue";
+    canvasContext.fillStyle = "rgba(222,50,50,1)";
     canvasContext.fill("evenodd");
 
     // layer1/Path
@@ -568,6 +569,39 @@ function drawMaze() {
 
 }
 
+function drawGrid() {
+    let x = 0;
+    let y = 40;
+    canvasContext.save();
+    canvasContext.beginPath();
+    for(let i=0; i<=20; i++) {
+        canvasContext.moveTo(x, y);
+        canvasContext.lineTo(canvas.width, y);
+        canvasContext.lineTo(canvas.width, y-1);
+        canvasContext.lineTo(x, y-1);
+        canvasContext.closePath();
+        canvasContext.fillStyle = "pink";
+        canvasContext.fill("evenodd");
+        y = y + 40;
+    }
+    y = 0;
+    x = 40;
+    canvasContext.save();
+    canvasContext.beginPath();
+
+    for(i=0; i<=22; i++) {
+        canvasContext.moveTo(x, y);
+        canvasContext.lineTo(x, canvas.height);
+        canvasContext.lineTo(x-1, canvas.height);
+        canvasContext.lineTo(x-1, y);
+        canvasContext.closePath();
+        canvasContext.fillStyle = "pink";
+        canvasContext.fill("evenodd");
+        x = x + 40;
+    }
+
+}
+
 function drawPacman() {
 
     canvasContext.beginPath();
@@ -576,3 +610,4 @@ function drawPacman() {
     canvasContext.lineTo(180, 300);
     canvasContext.fill();
 }
+
