@@ -3,7 +3,7 @@ V	Ik heb een github repo pac-man
 V	Ik heb een html pagina met een titel PAC-MAN en een canvas erop
 V	er staat een doolhof op het scherm
 
->>    - grid refactoren
+V   grid refactoren
 >>    - doolhof met rectangles maken ivm minder code
 
 •	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
