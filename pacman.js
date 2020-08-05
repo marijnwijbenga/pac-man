@@ -68,7 +68,7 @@ const canvasContext = canvas.getContext('2d');
 window.onload = function () {
     drawMaze();
     drawPacman();
-    drawGrid();
+    // drawGrid();
 }
 
 function drawMaze() {
