@@ -65,9 +65,7 @@ const canvas = document.getElementById('game');
 const canvasContext = canvas.getContext('2d');
 
 
-
 window.onload = function() {
-
    drawMaze();
    drawPacman();
    // drawGrid();
@@ -80,7 +78,6 @@ function drawMaze() {
     canvasContext.beginPath();
     canvasContext.fillStyle = MAZE_WALL_COLOR;
 
-
     for (let shape of MAZE_SHAPES) {
         canvasContext.fillRect(shape[0]*STEP, shape[1]*STEP, shape[2]*STEP, shape[3]*STEP);
     }
@@ -88,7 +85,6 @@ function drawMaze() {
 }
 
 function drawGrid() {
-
     canvasContext.fillStyle = "white";
     for(let x=0; x<=canvas.height; x += STEP) {
         canvasContext.fillRect(x, 0, 1, canvas.height);
@@ -103,11 +99,9 @@ function drawGrid() {
 }
 
 function drawPacman() {
-
     canvasContext.beginPath();
     canvasContext.fillStyle = PACMAN_COLOR;
     canvasContext.arc(180, 300, PACMAN_SIZE/2, 0.1 * Math.PI, 1.85 * Math.PI);
     canvasContext.lineTo(180, 300);
     canvasContext.fill();
 }
-
