@@ -3,7 +3,7 @@ const MAZE_WALL_COLOR = '#4287f5'
 const STEP = 40;
 const PACMAN_SIZE = 30;
 const PACMAN_COLOR = '#f5e642';
-const mazeShapes = [
+const MAZE_SHAPES = [
     [0, 0, 20, 1],
     [0, 1, 1, 6],
     [2, 2, 2, 1],
@@ -81,7 +81,7 @@ function drawMaze() {
     canvasContext.fillStyle = MAZE_WALL_COLOR;
 
 
-    for (let shape of mazeShapes) {
+    for (let shape of MAZE_SHAPES) {
         canvasContext.fillRect(shape[0]*STEP, shape[1]*STEP, shape[2]*STEP, shape[3]*STEP);
     }
     canvasContext.closePath();
