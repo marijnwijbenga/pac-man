@@ -4,6 +4,8 @@ const strokeColor = 'red'
 const canvas = document.getElementById('game');
 const canvasContext = canvas.getContext('2d');
 
+const step = 40
+
 window.onload = function() {
 
    drawMaze();
@@ -573,69 +575,64 @@ function drawMaze() {
     // current line numbers 582
     // after refactor:
 
-    const step = 40;
     canvasContext.beginPath();
     canvasContext.fillStyle = "blue";
+    const mazeShapes = [
+        [0, 0, 20, 1],
+        [0, 1, 1, 6],
+        [2, 2, 2, 1],
+        [5, 2, 3, 1],
+        [9, 1, 2, 2],
+        [12, 2, 3, 1],
+        [16, 2, 2, 1],
+        [19, 1, 1, 6],
+        [2, 4, 2, 1],
+        [1, 6, 3, 1],
+        [3, 7, 1, 1],
+        [5, 4, 1, 5],
+        [6, 6, 2, 1],
+        [7, 4, 6, 1],
+        [9, 5, 2, 2],
+        [14, 4, 1, 5],
+        [12, 6, 2, 1],
+        [16, 4, 2, 1],
+        [16, 6, 3, 1],
+        [16, 7, 1, 1],
+        [16, 8, 4, 1],
+        [7, 8, 2, 1],
+        [9, 8.25, 2, 1/2],
+        [11, 8, 2, 1],
+        [7, 9, 1, 1],
+        [12, 9, 1, 1],
+        [0, 8, 4, 1],
+        [0, 10, 4, 1],
+        [3, 11, 1, 1],
+        [0, 12, 4, 1],
+        [0, 13, 1, 8],
+        [0, 13, 1, 8],
+        [1, 16, 1, 1],
+        [5, 10, 1, 3],
 
-    canvasContext.fillRect(0, 0, canvas.width, step);
-    canvasContext.fillRect(0, step, step, 6*step);
+    ];
 
-    canvasContext.fillRect(2*step, 2*step, 2*step, step);
-    canvasContext.fillRect(5*step, 2*step, 3*step, step);
-    canvasContext.fillRect(9*step, step, 2*step, 2*step);
-    canvasContext.fillRect(12*step, 2*step, 3*step, step);
-    canvasContext.fillRect(16*step, 2*step, 2*step, step);
-
-    canvasContext.fillRect(19*step, step, step, 6*step);
-
-    canvasContext.fillRect(2*step, 4*step, 2*step, step);
-    canvasContext.fillRect(step, 6*step, 3*step, step);
-    canvasContext.fillRect(3*step, 7*step, step, step);
-
-
-    canvasContext.fillRect(5*step, 4*step, step, 5*step);
-    canvasContext.fillRect(6*step, 6*step, 2*step, step);
-
-    canvasContext.fillRect(7*step, 4*step, 6*step, step);
-    canvasContext.fillRect(9*step, 5*step, 2*step, 2*step);
-
-    canvasContext.fillRect(14*step, 4*step, step, 5*step);
-    canvasContext.fillRect(12*step, 6*step, 2*step, step);
-
-    canvasContext.fillRect(16*step, 4*step, 2*step, step);
-    canvasContext.fillRect(16*step, 6*step, 3*step, step);
-    canvasContext.fillRect(16*step, 7*step, step, step);
-    canvasContext.fillRect(16*step, 8*step, 4*step, step);
-
-    // spook huis
-    canvasContext.fillRect(7*step, 8*step, 2*step, step);
-    canvasContext.fillRect(9*step, 8.25*step, 2*step, step/2);
-    canvasContext.fillRect(11*step, 8*step, 2*step, step);
-    canvasContext.fillRect(7*step, 9*step, step, step);
-    canvasContext.fillRect(12*step, 9*step, step, step);
-
-
-
-
-    canvasContext.fillRect(0, 8*step, 4*step, step);
-    canvasContext.fillRect(0, 10*step, 4*step, step);
-    canvasContext.fillRect(3*step, 11*step, step, step);
-    canvasContext.fillRect(0, 12*step, 4*step, step);
-    canvasContext.fillRect(0, 13*step, step, 8*step);
-    canvasContext.fillRect(0, 13*step, step, 8*step);
-    canvasContext.fillRect(step, 16*step, step, step);
-
+    for (let shape of mazeShapes) {
+        canvasContext.fillRect(shape[0]*step, shape[1]*step, shape[2]*step, shape[3]*step);
+    }
     canvasContext.closePath();
 }
 
 function drawGrid() {
-    const step = 40;
+
     canvasContext.fillStyle = "white";
     for(let x=0; x<=canvas.height; x += step) {
         canvasContext.fillRect(x, 0, 1, canvas.height);
+        canvasContext.font = "12px arial"
+        canvasContext.fillText(x/step, x, 12);
     }
     for(let y=0; y<=canvas.width; y += step) {
         canvasContext.fillRect(0, y, canvas.width, 1);
+        canvasContext.font = "12px arial"
+        canvasContext.fillText(y/step, 2, y);
     }
 }
 
