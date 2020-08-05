@@ -26,7 +26,7 @@ const MAZE_SHAPES = [
     [16, 7, 1, 1],
     [16, 8, 4, 1],
     [7, 8, 2, 1],
-    [9, 8.25, 2, 1/2],
+    [9, 8.25, 2, 1 / 2],
     [11, 8, 2, 1],
     [7, 9, 1, 1],
     [12, 9, 1, 1],
@@ -43,9 +43,9 @@ const MAZE_SHAPES = [
     [7, 12, 6, 1],
     [16, 10, 4, 1],
     [16, 11, 1, 1],
-    [16, 12,4, 1],
-    [2, 14,2, 1],
-    [3, 15,1, 2],
+    [16, 12, 4, 1],
+    [2, 14, 2, 1],
+    [3, 15, 1, 2],
     [5, 14, 3, 1],
     [9, 13, 2, 2],
     [12, 14, 3, 1],
@@ -65,10 +65,10 @@ const canvas = document.getElementById('game');
 const canvasContext = canvas.getContext('2d');
 
 
-window.onload = function() {
-   drawMaze();
-   drawPacman();
-   // drawGrid();
+window.onload = function () {
+    drawMaze();
+    drawPacman();
+    drawGrid();
 }
 
 function drawMaze() {
@@ -79,29 +79,29 @@ function drawMaze() {
     canvasContext.fillStyle = MAZE_WALL_COLOR;
 
     for (let shape of MAZE_SHAPES) {
-        canvasContext.fillRect(shape[0]*STEP, shape[1]*STEP, shape[2]*STEP, shape[3]*STEP);
+        canvasContext.fillRect(shape[0] * STEP, shape[1] * STEP, shape[2] * STEP, shape[3] * STEP);
     }
     canvasContext.closePath();
 }
 
 function drawGrid() {
     canvasContext.fillStyle = "white";
-    for(let x=0; x<=canvas.height; x += STEP) {
+    for (let x = 0; x <= canvas.height; x += STEP) {
         canvasContext.fillRect(x, 0, 1, canvas.height);
         canvasContext.font = "12px arial"
-        canvasContext.fillText(x/STEP, x, 12);
+        canvasContext.fillText(x / STEP, x, 12);
     }
-    for(let y=0; y<=canvas.width; y += STEP) {
+    for (let y = 0; y <= canvas.width; y += STEP) {
         canvasContext.fillRect(0, y, canvas.width, 1);
         canvasContext.font = "12px arial"
-        canvasContext.fillText(y/STEP, 2, y);
+        canvasContext.fillText(y / STEP, 2, y);
     }
 }
 
 function drawPacman() {
     canvasContext.beginPath();
     canvasContext.fillStyle = PACMAN_COLOR;
-    canvasContext.arc(180, 300, PACMAN_SIZE/2, 0.1 * Math.PI, 1.85 * Math.PI);
+    canvasContext.arc(180, 300, PACMAN_SIZE / 2, 0.1 * Math.PI, 1.85 * Math.PI);
     canvasContext.lineTo(180, 300);
     canvasContext.fill();
 }
