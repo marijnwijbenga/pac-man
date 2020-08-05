@@ -19,3 +19,4 @@ V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken vo
 •	als je alle bolletjes op hebt, stopt het spel (you win)
 •	als je een knopt indrukt (spatie, enter bijv), begint het spel opnieuw
 •	Het spel begint met een (new game, press enter to play)
+•	mooi design eromheen maken
