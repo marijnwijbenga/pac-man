@@ -4,8 +4,8 @@ V	Ik heb een html pagina met een titel PAC-MAN en een canvas erop
 V	er staat een doolhof op het scherm
 
 V   grid refactoren
->>    - doolhof met rectangles maken ivm minder code
->>  - array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken voor collision detection?
+V   doolhof met rectangles maken ivm minder code
+V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken voor collision detection?
 
 •	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
 •	je kunt teleporteren van links naar rechts en boven naar beneden (als geen muur is)
