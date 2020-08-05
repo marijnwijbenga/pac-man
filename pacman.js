@@ -1,10 +1,13 @@
-console.log('this works');
-const stroke = 20;
-const strokeColor = 'red'
+const BG_COLOR = '#333';
+const MAZE_WALL_COLOR = '#4287f5'
+const STEP = 40;
+const PACMAN_SIZE = 30;
+const PACMAN_COLOR = '#f5e642';
+
 const canvas = document.getElementById('game');
 const canvasContext = canvas.getContext('2d');
 
-const step = 40
+
 
 window.onload = function() {
 
@@ -14,11 +17,11 @@ window.onload = function() {
 }
 
 function drawMaze() {
-    canvasContext.fillStyle = 'black';
+    canvasContext.fillStyle = BG_COLOR;
     canvasContext.fillRect(0, 0, canvas.width, canvas.height);
     canvasContext.save();
     canvasContext.beginPath();
-    canvasContext.fillStyle = "blue";
+    canvasContext.fillStyle = MAZE_WALL_COLOR;
     const mazeShapes = [
         [0, 0, 20, 1],
         [0, 1, 1, 6],
@@ -79,7 +82,7 @@ function drawMaze() {
     ];
 
     for (let shape of mazeShapes) {
-        canvasContext.fillRect(shape[0]*step, shape[1]*step, shape[2]*step, shape[3]*step);
+        canvasContext.fillRect(shape[0]*STEP, shape[1]*STEP, shape[2]*STEP, shape[3]*STEP);
     }
     canvasContext.closePath();
 }
@@ -87,23 +90,23 @@ function drawMaze() {
 function drawGrid() {
 
     canvasContext.fillStyle = "white";
-    for(let x=0; x<=canvas.height; x += step) {
+    for(let x=0; x<=canvas.height; x += STEP) {
         canvasContext.fillRect(x, 0, 1, canvas.height);
         canvasContext.font = "12px arial"
-        canvasContext.fillText(x/step, x, 12);
+        canvasContext.fillText(x/STEP, x, 12);
     }
-    for(let y=0; y<=canvas.width; y += step) {
+    for(let y=0; y<=canvas.width; y += STEP) {
         canvasContext.fillRect(0, y, canvas.width, 1);
         canvasContext.font = "12px arial"
-        canvasContext.fillText(y/step, 2, y);
+        canvasContext.fillText(y/STEP, 2, y);
     }
 }
 
 function drawPacman() {
 
     canvasContext.beginPath();
-    canvasContext.fillStyle = 'yellow';
-    canvasContext.arc(180, 300, 15, 0.1 * Math.PI, 1.85 * Math.PI);
+    canvasContext.fillStyle = PACMAN_COLOR;
+    canvasContext.arc(180, 300, PACMAN_SIZE/2, 0.1 * Math.PI, 1.85 * Math.PI);
     canvasContext.lineTo(180, 300);
     canvasContext.fill();
 }
