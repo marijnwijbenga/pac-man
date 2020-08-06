@@ -134,6 +134,7 @@ function animatePacman(direction) {
         canvasContext.clearRect(0, 0, canvas.width, canvas.height);
         drawMaze();
         drawPacman(pacmanX, pacmanY, pacmanDX);
+
         if (direction == 'right') {
             pacmanDX = 0;
             pacmanDX += PACMAN_SPEED;

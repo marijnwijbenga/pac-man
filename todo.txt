@@ -6,11 +6,12 @@ V	er staat een doolhof op het scherm
 V   grid refactoren
 V   doolhof met rectangles maken ivm minder code
 V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken voor collision detection?
-
 V	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
 
-.   https://codepen.io/tomhodgins/pen/vXmJdw voor smooth movement 
 .   requestAnimationFrame methode implementeren ipv setInterval
+    .   https://codepen.io/tomhodgins/pen/vXmJdw voor smooth movement
+    .   anders setTimeout die checked of pacmanX of pacmanY == canvas.width of height.
+
 .   probeer echte collision detection erin te krijgen
     .   als dat niet lukt: path restrictie aanmaken (collision detection workaround)
 •	files uit elkaar halen en in goeie folder structuur plaatsen
