@@ -7,10 +7,16 @@ V   grid refactoren
 V   doolhof met rectangles maken ivm minder code
 V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken voor collision detection?
 
+V	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
 
+•	probeer om niet de hele maze continue te redrawen maar alleen de vorige positie van pacman te clearen met clearRect();
+.   animeren met setInterval op basis van input
+.   probeer echte collision detection erin te krijgen
+    .   als dat niet lukt: path restrictie aanmaken (collision detection workaround)
+•	files uit elkaar halen en in goeie folder structuur plaatsen
 •	files uit elkaar halen en in goeie folder structuur plaatsen
 
-•	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
+
 •	je kunt teleporteren van links naar rechts en boven naar beneden (als geen muur is)
 •	er staan bolletjes in het doolhof die verdwijnen als hij erover heen komt
 •	De score wordt bijgehouden naar het aantal bolletjes
