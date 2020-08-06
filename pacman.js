@@ -4,6 +4,7 @@ const STEP = 40;
 const PACMAN_SIZE = 30;
 const PACMAN_COLOR = '#f5e642';
 const FPS = 24;
+const PACMAN_SPEED = 2;
 const MAZE_SHAPES = [
     [0, 0, 20, 1],
     [0, 1, 1, 6],
@@ -103,70 +104,62 @@ function drawGrid() {
 
 var pacmanX = 180;
 var pacmanY = 300;
-var pacmanDX = 1;
-var pacmanDY = 1;
-
+var pacmanDX;
+var pacmanDY;
 
 
 function movePacman() {
     document.addEventListener('keydown', pressKey);
+
     function pressKey(event) {
         var direction;
-        if(event.keyCode === 87) {
-            direction = 'up';
-            animatePacman(direction);
+        if (event.keyCode === 87) {
+            animatePacman(direction = 'up');
         }
-        if(event.keyCode === 65) {
-            direction = 'left';
-            animatePacman(direction);
+        if (event.keyCode === 65) {
+            animatePacman(direction = 'left');
         }
-        if(event.keyCode === 83) {
-            direction = 'down';
-            animatePacman(direction);
+        if (event.keyCode === 83) {
+            animatePacman(direction = 'down');
         }
-        if(event.keyCode === 68) {
-            direction = 'right';
-            animatePacman(direction);
+        if (event.keyCode === 68) {
+            animatePacman(direction = 'right');
         }
     }
 }
-
 
 
 function animatePacman(direction) {
     function animate() {
         canvasContext.clearRect(0, 0, canvas.width, canvas.height);
         drawMaze();
-        drawPacman(pacmanX, pacmanY, pacmanDX, pacmanDY);
-        if(direction == 'right') {
-            pacmanDX += 1;
+        drawPacman(pacmanX, pacmanY, pacmanDX);
+        if (direction == 'right') {
+            pacmanDX = 0;
+            pacmanDX += PACMAN_SPEED;
             pacmanX += pacmanDX;
         }
-        if(direction == 'left') {
-            pacmanDX -= 1;
+        if (direction == 'left') {
+            pacmanDX = 0;
+            pacmanDX -= -PACMAN_SPEED;
             pacmanX -= pacmanDX;
         }
-        if(direction == 'up') {
-            pacmanDY -= 1;
+        if (direction == 'up') {
+            pacmanDY = 0;
+            pacmanDY -= PACMAN_SPEED;
             pacmanY += pacmanDY;
         }
-        if(direction == 'down') {
-            pacmanDY -= 1;
+        if (direction == 'down') {
+            pacmanDY = 0;
+            pacmanDY -= PACMAN_SPEED;
             pacmanY -= pacmanDY;
+            console.log(pacmanY);
+            console.log(pacmanDY);
+
         }
     }
 
-    animate();
-    //
-    // var interval = setInterval(function () {
-    //     animate();
-    // }, FPS*4);
-    //
-    // setTimeout(function () {
-    //     clearInterval(interval);
-    // }, 5000);
-
-
+    setInterval(animate, 10);
 }
 
 function drawPacman(pacmanX, pacmanY) {
