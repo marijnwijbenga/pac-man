@@ -3,6 +3,7 @@ const MAZE_WALL_COLOR = '#4287f5'
 const STEP = 40;
 const PACMAN_SIZE = 30;
 const PACMAN_COLOR = '#f5e642';
+const FPS = 24;
 const MAZE_SHAPES = [
     [0, 0, 20, 1],
     [0, 1, 1, 6],
@@ -66,9 +67,11 @@ const canvasContext = canvas.getContext('2d');
 
 
 window.onload = function () {
-    drawMaze();
-    drawPacman();
+    // drawMaze();
+    // drawPacman();
     // drawGrid();
+    animatePacman();
+    movePacman();
 }
 
 function drawMaze() {
@@ -98,10 +101,80 @@ function drawGrid() {
     }
 }
 
-function drawPacman() {
+var pacmanX = 180;
+var pacmanY = 300;
+var pacmanDX = 1;
+var pacmanDY = 1;
+
+
+
+function movePacman() {
+    document.addEventListener('keydown', pressKey);
+    function pressKey(event) {
+        var direction;
+        if(event.keyCode === 87) {
+            direction = 'up';
+            animatePacman(direction);
+        }
+        if(event.keyCode === 65) {
+            direction = 'left';
+            animatePacman(direction);
+        }
+        if(event.keyCode === 83) {
+            direction = 'down';
+            animatePacman(direction);
+        }
+        if(event.keyCode === 68) {
+            direction = 'right';
+            animatePacman(direction);
+        }
+    }
+}
+
+
+
+function animatePacman(direction) {
+    function animate() {
+        canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+        drawMaze();
+        drawPacman(pacmanX, pacmanY, pacmanDX, pacmanDY);
+        if(direction == 'right') {
+            pacmanDX += 1;
+            pacmanX += pacmanDX;
+        }
+        if(direction == 'left') {
+            pacmanDX -= 1;
+            pacmanX -= pacmanDX;
+        }
+        if(direction == 'up') {
+            pacmanDY -= 1;
+            pacmanY += pacmanDY;
+        }
+        if(direction == 'down') {
+            pacmanDY -= 1;
+            pacmanY -= pacmanDY;
+        }
+    }
+
+    animate();
+    //
+    // var interval = setInterval(function () {
+    //     animate();
+    // }, FPS*4);
+    //
+    // setTimeout(function () {
+    //     clearInterval(interval);
+    // }, 5000);
+
+
+}
+
+function drawPacman(pacmanX, pacmanY) {
+
     canvasContext.beginPath();
     canvasContext.fillStyle = PACMAN_COLOR;
-    canvasContext.arc(180, 300, PACMAN_SIZE / 2, 0.1 * Math.PI, 1.85 * Math.PI);
-    canvasContext.lineTo(180, 300);
+    canvasContext.arc(pacmanX, pacmanY, PACMAN_SIZE / 2, 0.1 * Math.PI, 1.85 * Math.PI);
+    canvasContext.lineTo(pacmanX, pacmanY);
     canvasContext.fill();
+
 }
