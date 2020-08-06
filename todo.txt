@@ -9,12 +9,12 @@ V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken vo
 
 V	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
 
-•	probeer om niet de hele maze continue te redrawen maar alleen de vorige positie van pacman te clearen met clearRect();
-.   animeren met setInterval op basis van input
+.   https://codepen.io/tomhodgins/pen/vXmJdw voor smooth movement 
+.   requestAnimationFrame methode implementeren ipv setInterval
 .   probeer echte collision detection erin te krijgen
     .   als dat niet lukt: path restrictie aanmaken (collision detection workaround)
 •	files uit elkaar halen en in goeie folder structuur plaatsen
-•	files uit elkaar halen en in goeie folder structuur plaatsen
+
 
 
 •	je kunt teleporteren van links naar rechts en boven naar beneden (als geen muur is)
