@@ -7,7 +7,7 @@ V   grid refactoren
 V   doolhof met rectangles maken ivm minder code
 V   array van maze wall posities (x,y, w, h) maken zodat je die kan gebruiken voor collision detection?
 
-
+- test
 •	files uit elkaar halen en in goeie folder structuur plaatsen
 
 •	er is een pacman poppetje dat beweegt op basis van input (wasd pijltjes)
