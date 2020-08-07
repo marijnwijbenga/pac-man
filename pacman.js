@@ -130,16 +130,16 @@ function animatePacman(direction) {
         drawPacman(pacmanX, pacmanY);
 
         if (direction == 'right') {
-            pacmanX += PACMAN_SPEED;
+            pacmanX++;
         }
         if (direction == 'left') {
-            pacmanX -= PACMAN_SPEED;
+            pacmanX--;
         }
         if (direction == 'up') {
-            pacmanY -= PACMAN_SPEED;
+            pacmanY--;
         }
         if (direction == 'down') {
-            pacmanY += PACMAN_SPEED;
+            pacmanY++;
         }
     }
     animate();
