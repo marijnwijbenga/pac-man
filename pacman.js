@@ -3,8 +3,7 @@ const MAZE_WALL_COLOR = '#4287f5'
 const STEP = 40;
 const PACMAN_SIZE = 30;
 const PACMAN_COLOR = '#f5e642';
-const FPS = 24;
-const PACMAN_SPEED = 2;
+var PACMAN_SPEED = 2;
 const MAZE_SHAPES = [
     [0, 0, 20, 1],
     [0, 1, 1, 6],
@@ -104,13 +103,9 @@ function drawGrid() {
 
 var pacmanX = 180;
 var pacmanY = 300;
-var pacmanDX;
-var pacmanDY;
-
 
 function movePacman() {
     document.addEventListener('keydown', pressKey);
-
     function pressKey(event) {
         var direction;
         if (event.keyCode === 87) {
@@ -122,7 +117,7 @@ function movePacman() {
         if (event.keyCode === 83) {
             animatePacman(direction = 'down');
         }
-        if (event.keyCode === 68) {
+        if (event.keyCode === 68)  {
             animatePacman(direction = 'right');
         }
     }
@@ -131,36 +126,26 @@ function movePacman() {
 
 function animatePacman(direction) {
     function animate() {
+        requestAnimationFrame(animate);
         canvasContext.clearRect(0, 0, canvas.width, canvas.height);
         drawMaze();
-        drawPacman(pacmanX, pacmanY, pacmanDX);
+        drawPacman(pacmanX, pacmanY);
 
         if (direction == 'right') {
-            pacmanDX = 0;
-            pacmanDX += PACMAN_SPEED;
-            pacmanX += pacmanDX;
+            pacmanX += PACMAN_SPEED;
+
         }
         if (direction == 'left') {
-            pacmanDX = 0;
-            pacmanDX -= -PACMAN_SPEED;
-            pacmanX -= pacmanDX;
+            pacmanX -= PACMAN_SPEED;
         }
         if (direction == 'up') {
-            pacmanDY = 0;
-            pacmanDY -= PACMAN_SPEED;
-            pacmanY += pacmanDY;
+            pacmanY -= PACMAN_SPEED;
         }
         if (direction == 'down') {
-            pacmanDY = 0;
-            pacmanDY -= PACMAN_SPEED;
-            pacmanY -= pacmanDY;
-            console.log(pacmanY);
-            console.log(pacmanDY);
-
+            pacmanY += PACMAN_SPEED;
         }
     }
-
-    setInterval(animate, 10);
+    animate();
 }
 
 function drawPacman(pacmanX, pacmanY) {
