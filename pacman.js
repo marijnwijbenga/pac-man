@@ -3,7 +3,7 @@ const MAZE_WALL_COLOR = '#4287f5'
 const STEP = 40;
 const PACMAN_SIZE = 30;
 const PACMAN_COLOR = '#f5e642';
-var PACMAN_SPEED = 2;
+const PACMAN_SPEED = 2;
 const MAZE_SHAPES = [
     [0, 0, 20, 1],
     [0, 1, 1, 6],
@@ -65,7 +65,6 @@ const MAZE_SHAPES = [
 const canvas = document.getElementById('game');
 const canvasContext = canvas.getContext('2d');
 
-
 window.onload = function () {
     // drawMaze();
     // drawPacman();
@@ -123,7 +122,6 @@ function movePacman() {
     }
 }
 
-
 function animatePacman(direction) {
     function animate() {
         requestAnimationFrame(animate);
@@ -133,7 +131,6 @@ function animatePacman(direction) {
 
         if (direction == 'right') {
             pacmanX += PACMAN_SPEED;
-
         }
         if (direction == 'left') {
             pacmanX -= PACMAN_SPEED;
@@ -149,11 +146,9 @@ function animatePacman(direction) {
 }
 
 function drawPacman(pacmanX, pacmanY) {
-
     canvasContext.beginPath();
     canvasContext.fillStyle = PACMAN_COLOR;
     canvasContext.arc(pacmanX, pacmanY, PACMAN_SIZE / 2, 0.1 * Math.PI, 1.85 * Math.PI);
     canvasContext.lineTo(pacmanX, pacmanY);
     canvasContext.fill();
-
 }
