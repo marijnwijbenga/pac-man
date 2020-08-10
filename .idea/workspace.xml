@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb0b3874-162f-45c7-801c-df1a3da56abd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/maze/maze def.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/maze/maze def.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/maze/maze.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/maze/maze.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/maze/maze_template.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/maze.js" beforeDir="false" />
-    </list>
+    <list default="true" id="eb0b3874-162f-45c7-801c-df1a3da56abd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596801622556</updated>
       <workItem from="1596801623659" duration="5806000" />
-      <workItem from="1597046063940" duration="8166000" />
+      <workItem from="1597046063940" duration="8301000" />
     </task>
     <servers />
   </component>
