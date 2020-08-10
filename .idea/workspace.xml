@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0b3874-162f-45c7-801c-df1a3da56abd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/color.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/direction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/maze.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/maze.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pacman.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/painter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/maze/maze def.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/maze/maze def.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/maze/maze.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/maze/maze.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/maze/maze_template.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/maze.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596801622556</updated>
       <workItem from="1596801623659" duration="5806000" />
-      <workItem from="1597046063940" duration="8011000" />
+      <workItem from="1597046063940" duration="8166000" />
     </task>
     <servers />
   </component>
