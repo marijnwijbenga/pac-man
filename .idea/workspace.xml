@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0b3874-162f-45c7-801c-df1a3da56abd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/coensversie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/direction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/maze.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/maze.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pacman.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/painter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -48,9 +58,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pacman-coen" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
@@ -63,6 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596801622556</updated>
       <workItem from="1596801623659" duration="5806000" />
+      <workItem from="1597046063940" duration="8011000" />
     </task>
     <servers />
   </component>
@@ -79,8 +91,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="512" y="152" key="FileChooserDialogImpl" timestamp="1597047201921">
+      <screen x="0" y="0" width="1463" height="793" />
+    </state>
+    <state x="512" y="152" key="FileChooserDialogImpl/0.0.1463.793/2560.0.1920.1050@0.0.1463.793" timestamp="1597047201921" />
     <state x="0" y="228" key="SettingsEditor" timestamp="1596802020688">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
